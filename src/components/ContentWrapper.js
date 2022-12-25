@@ -2,6 +2,7 @@
 import TopBar from './TopBar';
 import ContentRow from './ContentRow';
 import Footer from './Footer';
+import Tabla from './Tabla';
 
 function ContentWrapper(){
 
@@ -11,11 +12,12 @@ function ContentWrapper(){
             <TopBar/>
             <ContentRow/>
         </div>
+        <Tabla/>
         <Footer/>
     </div>
 
     )
 
-    }
+}
 
 export default ContentWrapper;
