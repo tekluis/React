@@ -1,6 +1,23 @@
-
+import TablaRow from "./TablaRow";
 
 function Tabla () {
+
+    let peliculas =[{
+        titulo: "a",
+        duracion: "2",
+        rating: "3",
+        generos: ["a","b"],
+        premios: "4",
+        },
+        {
+        titulo: "b",
+        duracion: "3",
+        rating: "5",
+        generos: ["c","d"],
+        premios: "8",
+    }]
+
+
     return (
 
         <table className="table">
@@ -14,23 +31,20 @@ function Tabla () {
                 </tr>
             </thead>
             <tbody>
+               
+               {peliculas.map( (pelicula,index) => {
+
+                return <TablaRow {...pelicula} key={index}/>
+
+               })}
+
+
                 <tr>
-                    <th scope="row">Billie Elioth</th>
-                    <td>5</td>
-                    <td><ul><li>Drama</li><li>Comedia</li></ul></td>
-                    <td>2</td>
-                </tr>
-                <tr>
-                    <th scope="row">Alicia en el pais de las maravillas</th>
-                    <td>142</td>
-                    <td><ul><li>Drama</li><li>Accion</li><li>Comedia</li></ul></td>
-                    <td>4.8</td>
-                </tr>
-                <tr>
-                    <th scope="row">Billie Eliot</th>
-                    <td>5</td>
-                    <td><ul><li>Drama</li><li>Comedia</li></ul></td>
-                    <td>2</td>
+                    <th scope="col">Titulo</th>
+                    <th>Duracion</th>
+                    <th>Rating</th>
+                    <th>Genero</th>
+                    <th>Premios</th>
                 </tr>
             </tbody>
 
